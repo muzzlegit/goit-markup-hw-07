@@ -40,11 +40,14 @@ body {
 .header {
   border-bottom: 1px solid #ececec;
 }
-.conteiner.nav {
+.header__conteiner {
   display: flex;
   align-items: center;
   padding-left: 15px;
   padding-right: 15px;
+}
+.header__logo {
+  color: var(--black-text-color);
 }
 .logo {
   font-family: Raleway, sans-serif;
@@ -55,21 +58,16 @@ body {
   color: var(--accent-text-color);
   text-decoration: none;
 }
-.logo-header {
-  color: var(--black-text-color);
-}
-.logo-footer {
-  color: var(--white-text-color);
-}
+
 /*стилизация меню навигации*/
-.navigation-list {
+.navigation__list {
   display: flex;
   margin-left: 93px;
 }
-.navigation-list .item:not(:last-child) {
+.navigation__item:not(:last-child) {
   margin-right: 50px;
 }
-.navigation-link {
+.navigation__link {
   position: relative;
 
   display: block;
@@ -81,15 +79,20 @@ body {
   line-height: 1.143;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
+  text-decoration: none;
 
   transition-property: color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
-.navigation-link.active-page {
+.navigation__link:hover,
+.navigation__link:focus {
   color: var(--accent-text-color);
 }
-.navigation-link.active-page:after {
+.navigation__link--active {
+  color: var(--accent-text-color);
+}
+.navigation__link--active:after {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -102,13 +105,7 @@ body {
   border-radius: 2px;
   background-color: var(--accent-text-color);
 }
-.navigation-link {
-  text-decoration: none;
-}
-.navigation-link:hover,
-.navigation-link:focus {
-  color: var(--accent-text-color);
-}
+
 /*стилизация контактных ссылок*/
 .contacts {
   display: flex;
@@ -120,10 +117,10 @@ body {
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 }
-.contacts .item:not(:last-child) {
+.contacts__item:not(:last-child) {
   margin-right: 50px;
 }
-.contacts-link {
+.contacts__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -138,12 +135,12 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
-.contacts-link:hover,
-.contacts-link:focus {
+.contacts__link:hover,
+.contacts__link:focus {
   color: var(--accent-text-color);
   fill: var(--accent-text-color);
 }
-.contacts-link .icon {
+.contacts__icon {
   margin-right: 10px;
 }
 /*ШАПКА*/
@@ -165,7 +162,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-.hero-title {
+.hero__title {
   margin-top: 0;
   margin-bottom: 30px;
 
@@ -176,7 +173,7 @@ body {
   text-transform: uppercase;
   color: var(--white-text-color);
 }
-.hero-button {
+.hero__button {
   padding: 10px 32px;
   border-radius: 4px;
   border-width: 0;
@@ -199,8 +196,8 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
-.hero-button:hover,
-.hero-button:focus {
+.hero__button:hover,
+.hero__button:focus {
   background-color: var(--bg-hero-button-color);
 }
 /* секции основных разделов */
@@ -209,7 +206,7 @@ body {
   padding-bottom: 94px;
   color: var(--primary-text-color);
 }
-.section-title {
+.section__title {
   margin-top: 0;
   margin-bottom: 50px;
   text-align: center;
@@ -227,10 +224,13 @@ body {
   font-size: 14px;
   line-height: 1.71;
 }
-.feature .item {
+.feature__item {
   flex-basis: 270px;
 }
-.feature-icon {
+.feature__item:not(:last-child) {
+  margin-right: 30px;
+}
+.feature__icon {
   display: flex;
   margin-bottom: 30px;
   height: 120px;
@@ -241,11 +241,7 @@ body {
 
   background-color: var(--bg-section-color);
 }
-
-.feature .item:not(:last-child) {
-  margin-right: 30px;
-}
-.feature-title {
+.feature__title {
   margin-top: 0;
   margin-bottom: 10px;
 
@@ -258,20 +254,20 @@ body {
   margin: 0;
 }
 /*Чем мы занимаемся*/
-.work {
+.works {
   display: flex;
 }
-.work .item {
+.works__item {
   position: relative;
   flex-basis: calc((100% - 30px * 2) / 3);
 }
-.work .item:not(:last-child) {
+.works__item:not(:last-child) {
   margin-right: 30px;
 }
-.work-img {
+.works__img {
   display: block;
 }
-.work-description {
+.works__description {
   position: absolute;
   height: 70px;
   width: 100%;
@@ -754,6 +750,9 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
+}
+.footer__logo {
+  color: var(--white-text-color);
 }
 .box {
   display: flex;
