@@ -1,0 +1,40 @@
+.feature {
+  @extend %list;
+
+  display: flex;
+  margin-bottom: 94px;
+
+  color: $primary-text-color;
+  font-size: 14px;
+  line-height: 1.71;
+
+  &__item {
+    flex-basis: 270px;
+  }
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__icon {
+    display: flex;
+    margin-bottom: 30px;
+    height: 120px;
+    width: 270px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+
+    background-color: $bg-section-color;
+  }
+  &__titel {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $secondary-text-color;
+  }
+  &__description {
+    margin: 0;
+  }
+}

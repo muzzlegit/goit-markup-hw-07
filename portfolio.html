@@ -11,12 +11,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
   <header class="header">
     <div class="conteiner header__conteiner">
-      <a class="logo" href="/">Web<span class="logo--black">Studio</span></a>
+      <a class="logo" href="/">Web<span class="logo__text--black">Studio</span></a>
       <!--Навигация по сайту-->
       <nav class="navigation">
         <ul class="navigation__list pointkiller">
@@ -56,11 +56,11 @@
         <!-- <h1 class="section-title">Портфолио</h1>   -->
       <div class="conteiner">
         <ul class="filter-list pointkiller">
-          <li class="filter-list__item"><button class="filter-list__button" type="button">Все</button></li>
-          <li class="filter-list__item"><button class="filter-list__button" type="button">Веб-сайты</button></li>
-          <li class="filter-list__item"><button class="filter-list__button" type="button">Приложения</button></li>
-          <li class="filter-list__item"><button class="filter-list__button" type="button">Дизайн</button></li>
-          <li class="filter-list__item"><button class="filter-list__button" type="button">Маркетинг</button></li>
+          <li class="filter-list__item"><button class="button-filter" type="button">Все</button></li>
+          <li class="filter-list__item"><button class="button-filter" type="button">Веб-сайты</button></li>
+          <li class="filter-list__item"><button class="button-filter" type="button">Приложения</button></li>
+          <li class="filter-list__item"><button class="button-filter" type="button">Дизайн</button></li>
+          <li class="filter-list__item"><button class="button-filter" type="button">Маркетинг</button></li>
         </ul>
         <ul class="examples pointkiller">
           <li class="examples__item">
@@ -212,8 +212,8 @@
     <!--Подвал-->
   <footer class="footer">
     <div class="conteiner footer__conteiner">
-      <div class="adds-box">
-        <a class="logo footer__logo" href="/">Web<span class="logo--white">Studio</span></a>
+      <div class="footer__adds-box">
+        <a class="logo footer__logo" href="/">Web<span class="logo__text--white">Studio</span></a>
         <address class="address">
           <p class="address__text">г. Киев, пр-т Леси Украинки, 26</p>
           <ul class="address__list pointkiller">
@@ -226,7 +226,7 @@
           </ul>
         </address>
       </div>
-      <div class="join-box">
+      <div class="footer__join-box">
         <h2 class="footer__title">Присоединяйтесь</h2>
         <ul class="social pointkiller">
           <li class="social__item">
@@ -259,15 +259,15 @@
           </li>
         </ul>
       </div>
-      <div class="sign-box">
+      <div class="footer__sign-box">
         <h2 class="footer__title">Подпишитесь на рассылку</h2>
         <form class="mailing-form" name="mailing-form">
           <label class="mailing-form__title">
             <input class="mailing-form__input" type="email" name="email" placeholder="E-mail">
           </label>
-          <button class="sign-button" type="submit">
+          <button class="button" type="submit">
             Подписаться
-            <svg width="24" height="24" class="icon">
+            <svg width="24" height="24" class="button__plane-icon">
               <use href=./images/icons.svg#icon-send></use>
             </svg>
           </button>
