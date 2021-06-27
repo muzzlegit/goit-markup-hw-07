@@ -1,17 +1,15 @@
 .social {
   @extend %list;
 
-  display: flex;
-  align-items: center;
+  @include flex-center();
 
   &__item:not(:last-child) {
     margin-right: 10px;
   }
   &__link {
-    display: flex;
+    @include flex-center();
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
+
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -19,7 +17,7 @@
     fill: $icon-color;
 
     transition-property: fill, background-color, box-shadow;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: $cubic-function;
     transition-duration: 250ms;
   }
   &__link--gray {

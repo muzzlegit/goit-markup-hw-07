@@ -14,9 +14,8 @@
     margin-right: 50px;
   }
   &__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center();
+
     padding-top: 32px;
     padding-bottom: 32px;
 
@@ -25,7 +24,7 @@
     text-decoration: none;
 
     transition-property: color, fill;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: $cubic-function;
     transition-duration: 250ms;
   }
   &__link:hover,

@@ -15,8 +15,7 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
   &__input::placeholder {
-    font-size: 16px;
-    line-height: 1.25;
+    @include font-get-up(1.25, $secondary-font-size);
     color: #ffffff99;
   }
 }

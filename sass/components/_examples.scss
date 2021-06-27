@@ -43,17 +43,14 @@
     transition-duration: 250ms;
   }
   &__text {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    @include flex-center(flex, center, flex-start);
 
     height: 100%;
     width: 100%;
     padding: 63px 24px;
     margin: 0;
 
-    font-size: 18px;
-    line-height: 1.56;
+    @include font-get-up(1.56, 18px);
     color: $white-text-color;
 
     overflow: auto;
@@ -76,13 +73,13 @@
     margin-top: 0;
     margin-bottom: 4px;
 
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
+    @include font-get-up(2, 18px, 0.06em);
     color: $secondary-text-color;
   }
   &__description {
     margin: 0;
+
+    @include font-get-up(1.87, $secondary-font-size, 0.06em);
     font-size: 16px;
     line-height: 1.87;
     color: $primary-text-color;

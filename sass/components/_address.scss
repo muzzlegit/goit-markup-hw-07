@@ -4,8 +4,7 @@
     margin-bottom: 9px;
 
     font-style: normal;
-    font-size: 14px;
-    line-height: 1.71;
+    @include font-get-up(1.71);
     color: $white-text-color;
   }
   &__list {
@@ -16,8 +15,7 @@
   }
   &__link {
     font-style: normal;
-    font-size: 14px;
-    line-height: 1.71;
+    @include font-get-up(1.71);
     color: $link-text-color;
     text-decoration: none;
   }

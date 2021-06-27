@@ -8,18 +8,18 @@
     margin-right: 30px;
   }
   &__link {
-    display: flex;
+    @include flex-center();
+
     height: 92px;
     width: 170px;
-    justify-content: center;
-    align-items: center;
+
     border: 1px solid #afb1b8;
     border-radius: 4px;
 
     fill: $icon-color;
 
     transition-property: fill, border-color;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: $cubic-function;
     transition-duration: 250ms;
   }
   &__link:hover,

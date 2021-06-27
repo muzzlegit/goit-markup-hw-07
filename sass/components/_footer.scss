@@ -26,8 +26,7 @@
     margin-bottom: 20px;
 
     font-weight: 700;
-    font-size: 14px;
-    line-height: 1.41;
+    @include font-get-up(1.41);
     color: $white-text-color;
     text-decoration: none;
     text-transform: uppercase;

@@ -43,9 +43,8 @@
     margin-bottom: 12px;
     text-align: center;
 
-    font-size: 20px;
-    line-height: 1.15;
     font-weight: 700;
+    @include font-get-up(1.15, 20px);
     color: $secondary-text-color;
   }
   &__field {
@@ -58,10 +57,7 @@
     display: block;
     margin-bottom: 4px;
 
-    font-size: 12px;
-    line-height: 1.167;
-    letter-spacing: 0.01em;
-
+    @include font-get-up(1.167, 12px, 0.01em);
     color: $primary-text-color;
   }
   &__input {
@@ -110,10 +106,7 @@
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   &__textarea::placeholder {
-    font-size: 12px;
-    line-height: 1.167;
-    letter-spacing: 0.01em;
-
+    @include font-get-up(1.167, 12px, 0.01em);
     color: rgba(117, 117, 117, 0.5);
   }
   &__agreement {
@@ -125,8 +118,8 @@
     display: inline-flex;
     align-items: center;
     vertical-align: middle;
-    font-size: 14px;
-    line-height: 1.71;
+
+    @include font-get-up(1.71, 14px);
     color: $primary-text-color;
   }
   &__link:focus-within {
@@ -136,8 +129,7 @@
   }
   &__link {
     text-decoration: underline;
-    font-size: 14px;
-    line-height: 1.71;
+    @include font-get-up(1.71, 14px, 0.06em);
     color: $accent-text-color;
     text-decoration-line: underline;
   }
@@ -165,9 +157,9 @@
     border: 2px solid $secondary-text-color;
     border-radius: 2px;
 
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms,
-      fill 250ms cubic-bezier(0.4, 0, 0.2, 1) 400ms;
+    transition: border-color 250ms $cubic-function,
+      background-color 250ms $cubic-function 100ms,
+      fill 250ms $cubic-function 400ms;
   }
   &__check-icon:hover,
   &__check-icon:focus {
